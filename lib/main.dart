@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'register_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -245,7 +247,12 @@ class _LoginPageState extends State<LoginPage> {
 
                     TextButton(
                       onPressed: () {
-                        // Register page will be added later
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RegisterPage(),
+                          ),
+                        );
                       },
                       child: const Text(
                         "Register",
